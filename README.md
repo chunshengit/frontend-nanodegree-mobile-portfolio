@@ -1,6 +1,7 @@
 Project 4:
 
 This project is hosted at: http://chunshengit.github.io/frontend-nanodegree-mobile-portfolio/
+
 The submission of the project is main branch.
 
 Part One: Critical Rendering Path Optimization steps
@@ -8,18 +9,15 @@ Part One: Critical Rendering Path Optimization steps
 (All the files are relative to root directory)
 
 1. Image Optimization to reduce the download bytes
-
    views/images/Pizzeria.jpg file size reduced from 2.3MB to 29.KB with dimension scaled from 2048*1536 to 100*75,
    imag/profilepic file size reduced with dimension scaled from 100*70 to 70*70.
 
 2. Rendering Blocking CSS Optimization
-
    a. Media query is added to css/print.css to take it off the CRP.
    b. Inline minified css/style.css.
    c. Remove webfont stylesheet.
 
 3. Remove Parsing-Blocking Javascripts
-
    a. Make Javascript Asynchonous.
       <script async src="http://www.google-analytics.com/analytics.js"></script>
 
