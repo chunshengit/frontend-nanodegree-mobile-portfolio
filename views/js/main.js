@@ -472,9 +472,11 @@ var resizePizzas = function(size) {
           console.log("bug in sizeSwitcher");
       }
 
-    var randomPizzas = document.querySelectorAll(".randomPizzaContainer");
+    //var randomPizzas = document.querySelectorAll(".randomPizzaContainer");
+    var randomPizzas = document.getElementsByClassName("randomPizzaContainer");
+    var length = randomPizzas.length;
 
-    for (var i = 0; i < randomPizzas.length; i++) {
+    for (var i = 0; i < length; i++) {
       randomPizzas[i].style.width = newwidth + "%";
     }
   }
@@ -491,8 +493,8 @@ var resizePizzas = function(size) {
 window.performance.mark("mark_start_generating"); // collect timing data
 
 // This for-loop actually creates and appends all of the pizzas when the page loads
+var pizzasDiv = document.getElementById("randomPizzas");
 for (var i = 2; i < 100; i++) {
-  var pizzasDiv = document.getElementById("randomPizzas");
   pizzasDiv.appendChild(pizzaElementGenerator(i));
 }
 
@@ -574,10 +576,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Give the browser the hint to optimize the painting
     // Bleeding edge feature.
     elem.style.willchange = "transform";
-    elem.style.webkitTransform = "translateZ(0px)"
+    elem.style.webkitTransform = "translateZ(0px)";
     elem.basicLeft = (i % cols) * s;
     elem.style.top = (Math.floor(i / cols) * s) + 'px';
-    document.querySelector("#movingPizzas1").appendChild(elem);
+    //document.querySelector("#movingPizzas1").appendChild(elem);
+    document.getElementById("#movingPizzas1").appendChild(elem);
   }
 
   updatePositions();
