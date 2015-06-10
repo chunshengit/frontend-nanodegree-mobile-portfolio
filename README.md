@@ -2,7 +2,7 @@ Project 4:
 
 This project is hosted at: http://chunshengit.github.io/frontend-nanodegree-mobile-portfolio/
 
-The submission of the project is main branch.
+The submission of the project is master branch.
 
 Part One: Critical Rendering Path Optimization steps
 

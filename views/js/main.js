@@ -554,6 +554,7 @@ window.addEventListener('scroll', updatePositions);
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
+
   // Only generate enough pizzas needed for the viewport instead of fixed amount of pizzas
   // to reduce the cost and time of running javascript and painting.
 
@@ -572,7 +573,7 @@ document.addEventListener('DOMContentLoaded', function() {
     elem.style.width = "73.333px";
     // Give the browser the hint to optimize the painting
     // Bleeding edge feature.
-    elem.style.wilchange = "transform";
+    elem.style.willchange = "transform";
     elem.style.webkitTransform = "translateZ(0px)"
     elem.basicLeft = (i % cols) * s;
     elem.style.top = (Math.floor(i / cols) * s) + 'px';
