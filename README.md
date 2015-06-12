@@ -1,6 +1,15 @@
 Project 4:
 
 This project is hosted at: http://chunshengit.github.io/frontend-nanodegree-mobile-portfolio/
+Copy and paste this URL in to the browser to launch the project.
+
+For Part one of the project, all the optimization work is done at the main page sourced from index.html.
+To measure the page performance, just copy the URL into the Google PageSpeed Insights for PageSpeed score.
+
+For Part two of the project, just click "Cam's Pizzeria" hyperlink to launch "Cam's Pizza" page sourced from pizza.html.
+When scrolling the page up and down with side bar, you will see the background pizza moving horizontally.
+There is slider in the page and you can choose the pizza size by moving the slider. The page will display different recipes
+for each size of pizza choice.
 
 The submission of the project is master branch.
 
