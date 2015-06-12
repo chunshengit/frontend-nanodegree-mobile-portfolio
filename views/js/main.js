@@ -398,7 +398,7 @@ var pizzaElementGenerator = function(i) {
   return pizzaContainer;
 };
 
-// Store the randomPizzas and their length one the page loads. 
+// Store the randomPizzas and their length one the page loads.
 var randomPizzas = document.getElementsByClassName("randomPizzaContainer");
 var lengthOfRandomPizzas = randomPizzas.length;
 
@@ -425,6 +425,7 @@ var resizePizzas = function(size) {
 
   changeSliderLabel(size);
 
+// Change the pizza size based on slider position
   function changePizzaSizes(size) {
     var newwidth;
         switch(size) {
@@ -441,7 +442,7 @@ var resizePizzas = function(size) {
           console.log("bug in sizeSwitcher");
       }
 
-	for (var i = 0; i < lengthOfRandomPizzas; i++) {
+for (var i = 0; i < lengthOfRandomPizzas; i++) {
       randomPizzas[i].style.width = newwidth + "%";
     }
   }
@@ -486,13 +487,13 @@ function logAverageFrame(times) {   // times is the array of User Timing measure
 // Moves the sliding background pizzas based on scroll position
 function updatePositions() {
   frame++;
-  window.performance.mark("mark_start_frame"); 
+  window.performance.mark("mark_start_frame");
 
-  // Can only think of pulling the "mover" items here as they are forwarded defined 
-  // and can't refer to them here. 
-  var items = document.getElementsByClassName('mover'); 
-  var lengthOfItems = items.length; 
-  
+  // Can only think of pulling the "mover" items here as they are forwarded generated and defined
+  // and can't be referred from here. Tried different options and none of them worked.
+  var items = document.getElementsByClassName('mover');
+  var lengthOfItems = items.length;
+
   // Precalculate the phases for background pizzas as document.body.scrollTop is the same for all pizzas per scroll.
   // There is only need to calculate 5 phase value.
   var phases = [];
@@ -519,7 +520,6 @@ function updatePositions() {
 
 // runs updatePositions on scroll
 window.addEventListener('scroll', updatePositions);
-var itemsMover = []; 
 // Generates the sliding pizzas when the page loads.
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
